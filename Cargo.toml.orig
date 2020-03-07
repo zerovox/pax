@@ -1,0 +1,43 @@
+[package]
+name = "pax"
+version = "0.4.0"
+authors = ["Nathan"]
+
+description = "The fastest JavaScript bundler in the galaxy."
+repository = "https://github.com/nathan/pax"
+license = "MIT"
+readme = "../README.md"
+
+keywords = ["js", "javascript", "es", "ecmascript", "bundler"]
+categories = ["development-tools", "command-line-utilities", "web-programming"]
+
+autobins = true
+exclude = [
+  "examples/*",
+  "private/*",
+  "src/test/*",
+]
+
+[[bin]]
+name = "px"
+path = "src/main.rs"
+
+[features]
+default = []
+bench = []
+
+[dependencies]
+esparse = { version = "0.1.0", path = "../esparse" }
+regex = "1"
+fnv = "1.0.3"
+lazy_static = "1.1.0"
+cfg-if = "0.1.4"
+crossbeam = "0.2"
+num_cpus = "1.6"
+matches = "0.1"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+notify = "4.0"
+memchr = "2.0.1"
+base64 = "0.6.0"
